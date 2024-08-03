@@ -35,6 +35,18 @@ class Program
         var dataToWrite = new byte[] { 10, 20, 30 };
         device.WriteData(startIndex, dataToWrite);
 
+        var s = new SmallOS.Scheduler();
+        // Task operations
+        s.CreateTask("Task 1", 1);
+        s.CreateTask("Task 2", 2);
+        s.StartTask(1);
+        //s.SendMessage(1, 2, "Hello, Task 2!");
+        s.PauseTask(1);
+        s.ResumeTask(1);
+        s.StopTask(1);
+        s.DeleteTask(1);
+
+
         // Read data
         Console.WriteLine("Reading data from device...");
         var readData = device.ReadData(startIndex, dataToWrite.Length);

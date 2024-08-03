@@ -1,6 +1,6 @@
 ﻿
 // Logger implementation
-class Logger : ILogger
+public class Logger : ILogger
 {
     public void LogEvent(LogLevel level, string message)
     {

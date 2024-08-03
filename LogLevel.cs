@@ -1,6 +1,6 @@
 ﻿
 // Define log levels for better logging management
-enum LogLevel
+public enum LogLevel
 {
     Info,
     Warning,
